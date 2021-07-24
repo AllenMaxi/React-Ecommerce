@@ -1,0 +1,22 @@
+.itemContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 4rem;
+    .healthy-life{
+        width: 100%;
+    }
+}
+ul{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .elementList{
+    list-style: none;
+    font-family: 'Otomanopee One', sans-serif; 
+    font-size: 2rem;
+    padding: 1rem;
+    color: green;
+ }
+}
