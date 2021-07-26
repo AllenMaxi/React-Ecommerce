@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducts } from 'components/functions/getProduct';
 import Item from 'components/Item';
+import { ProductStyles } from 'components/styles/ProductsStyle';
 
 const Products = () => {
     const [products, setProducts] = useState([])
@@ -20,7 +21,7 @@ const Products = () => {
  }, [categoryID])
 
     return(
-        <div>
+        <ProductStyles>
      <h2><span>{categoryID}</span> Products</h2>
     {products.map(item => <div key={item.name}><Item 
       id={item.id}
@@ -29,7 +30,7 @@ const Products = () => {
       price={item.price}
       img={`../${item.img}`}/>
       </div> )}
-     </div> 
+     </ProductStyles>
     )
     }
 

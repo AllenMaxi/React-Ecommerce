@@ -7,6 +7,11 @@ import "../App.css";
 
 function NavBar() {
    const [showLinks, setShowLinks] = useState(false);
+
+   const cursor = {
+      cursor: "pointer",
+   };
+   
    return (
       <div className="Navbar">
          <div className="leftSide">
@@ -17,7 +22,7 @@ function NavBar() {
             <Link to="/category/Vegans">Vegans</Link>
             <Link to="/contact">Contact</Link>
             </div>
-         <button onClick={() => setShowLinks(!showLinks)}>
+         <button onClick={() => setShowLinks(!showLinks)} style={cursor}>
             <ReorderIcon/>
          </button>
          </div>

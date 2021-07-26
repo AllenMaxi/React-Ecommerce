@@ -1,25 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FlipInYDiv } from 'animations/FlipInYDiv';
 
-const Item = ({name, img, description, price, id}) => {
+const Item = ({name, img, price}) => {
 
     return(
       
-        <div className="details" >
+  <div className="details">
       <div className="item-name">
-         <p>{id}</p> 
         <h2>{name}</h2>
       </div>
-      <Link to={`/product-detail/${id}`} style={{ textDecoration: 'none' }}>
      <div className="item-img">
+     <FlipInYDiv>
        <img src={img} alt={name}/> 
+       </FlipInYDiv>
      </div>
-      </Link>
      <div>
-         <h3>{description}</h3>
-         <p><b>${price}</b></p>
+         <h3><b>${price}</b></h3>
      </div>
-      </div>
+  </div>
+  
     )
 }
 

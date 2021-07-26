@@ -5,8 +5,11 @@ import ItemDetailContainer from 'components/ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Products from 'pages/Products';
 
+
 function App() {
+
   return (
+    <div>
     <Router>
       <NavBar/>
     <div className="App">
@@ -32,7 +35,8 @@ function App() {
       </Switch>
     </div>
     </Router>
-  );
+    </div>
+  )
 }
 
 export default App;

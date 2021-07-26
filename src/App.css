@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
 .App{
-    width: 100vw;
-    height: 100vh;
+  width: 100%;
 }
 
 body {
@@ -125,3 +124,4 @@ h1{
 .count {
   text-align: center;
 }
+
