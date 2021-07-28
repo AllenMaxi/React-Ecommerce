@@ -19,14 +19,15 @@ let {id} = useParams();
         .then(res => setProduct(res.filter(item => item.id === Number(id))))
      }
   }, [id]) 
-  console.log(product)
+
     return(
         <div>
             {(product.length === 0) ? "Loading..." 
             :<ItemDetail name={product[0].name}
             img={product[0].img} 
             price={product[0].price}
-            description={product[0].description}/>}
+            description={product[0].description}
+            product={product[0]}/>}
             
          </div>
     )

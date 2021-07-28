@@ -48,7 +48,7 @@ const ItemList = () => {
       description={item.description}
       price={item.price}
       img={item.img} /> 
-      <ItemCount id={item.id} stock={10} initial={1}/></li>)}
+      <ItemCount id={item.id} /></li>)}
 </div> 
     )
 }

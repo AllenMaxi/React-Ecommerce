@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducts } from 'components/functions/getProduct';
 import Item from 'components/Item';
-import { ProductStyles } from 'components/styles/ProductsStyle';
+import { ProductStyles } from 'components/styles/ProductsStyle'
 
 const Products = () => {
     const [products, setProducts] = useState([])
@@ -28,7 +28,7 @@ const Products = () => {
       name={item.name}
       description={item.description}
       price={item.price}
-      img={`../${item.img}`}/>
+      img={item.img}/>
       </div> )}
      </ProductStyles>
     )
