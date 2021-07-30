@@ -6,8 +6,7 @@ import ItemCart from 'context/CartContext';
 
 const ItemDetail = ({name, price, img, description, product}) => {
 const [press, setPress] = useState(false);
-const {itemsCart, setCart, setQuantity} = useContext(ItemCart);
-
+const {itemsCart, setCart} = useContext(ItemCart);
 
 
   const handleProduct = () => {
@@ -18,7 +17,6 @@ const {itemsCart, setCart, setQuantity} = useContext(ItemCart);
     }
   setCart(product)
   setPress(true);
-  setQuantity(itemsCart.length + 1)
 }
 
 console.log(itemsCart);

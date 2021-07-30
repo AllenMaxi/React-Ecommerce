@@ -12,6 +12,7 @@ const CartItemsContainer = () => {
           key={item.id}
           img={item.img}
           category={item.category}
+          id={item.id}
           description={item.description}/>)}  
         </div>
     )
