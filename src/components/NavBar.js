@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import CartWidget from './CartWidget';
 import ReorderIcon from "@material-ui/icons/Reorder"
 import { Link } from 'react-router-dom';
 import "../App.css";
-
+import ItemCart from 'context/CartContext';
 
 function NavBar() {
    const [showLinks, setShowLinks] = useState(false);
-
+   const {quantity} = useContext(ItemCart);
+   
    const cursor = {
       cursor: "pointer",
    };
@@ -31,7 +32,7 @@ function NavBar() {
               <Link to="/" style={{ textDecoration: 'none' }}> 
               <p>Healthy <span>LIFE</span> 🍚</p></Link>
             </div>
-         <p>0</p><CartWidget/>
+         <p>{quantity}</p><Link to="/Cart"><CartWidget/></Link>
          </div>
       </div>
    )

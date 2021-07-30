@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { ItemsDetail } from './styles/ItemsDetail';
 import { BounceInDiv } from 'animations/BouncyDiv';
 import ItemDetailCount from './ItemDetailCount';
+import ItemCart from 'context/CartContext';
 
 const ItemDetail = ({name, price, img, description, product}) => {
-const [productCart, setProductCart] = useState([]);
 const [press, setPress] = useState(false);
+const {itemsCart, setCart, setQuantity} = useContext(ItemCart);
+
+
 
   const handleProduct = () => {
-    setProductCart(product)
-    setPress(true);
+    for (let i = 0; i < itemsCart.length; i++) {
+      if(itemsCart[i].id === product.id){
+       return
+      }  
+    }
+  setCart(product)
+  setPress(true);
+  setQuantity(itemsCart.length + 1)
 }
 
-console.log(productCart)
+console.log(itemsCart);
+
     return(
         <ItemsDetail>
       <h2><span>The best products to start your healthy life</span></h2>

@@ -4,7 +4,6 @@ import { getProducts } from './functions/getProduct';
 import { useParams } from 'react-router-dom';
 
 
-
 export default  function ItemDetailContainer() {
 const [product, setProduct] = useState([])
 let {id} = useParams();
@@ -30,6 +29,7 @@ let {id} = useParams();
             product={product[0]}/>}
             
          </div>
+         
     )
   
 }

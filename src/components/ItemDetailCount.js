@@ -10,15 +10,16 @@ const handleAdd = () => {
        setContador(contador + 1)
        setStockProduct(stockProduct - 1)
     } 
+
 } 
+
 const handleRemove = () => {
     if(contador>initial ) { 
         setContador(contador - 1)
         }
     
 } 
-console.log(contador)
-console.log(stockProduct)
+  
     return (
      <div>
         <div>

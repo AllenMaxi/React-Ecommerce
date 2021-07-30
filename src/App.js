@@ -1,14 +1,18 @@
+import React from 'react'
 import NavBar from 'components/NavBar';
 import ItemListContainer from 'components/ItemListContainer';
 import "./App.css";
 import ItemDetailContainer from 'components/ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Products from 'pages/Products';
+import { ItemCartProvider } from 'context/CartContext';
+import CartItemsContainer from 'pages/CartItemsContainer';
 
 
 function App() {
-
+ 
   return (
+    <ItemCartProvider>
     <div>
     <Router>
       <NavBar/>
@@ -31,11 +35,13 @@ function App() {
   </Route>
   <Route exact path="/category/:categoryID" component={Products}/>
   </div>
+  <Route exact path="/Cart" component={CartItemsContainer}/>
       </div>
       </Switch>
     </div>
     </Router>
     </div>
+    </ItemCartProvider>
   )
 }
 

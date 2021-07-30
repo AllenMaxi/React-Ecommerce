@@ -4,6 +4,7 @@ export const products = [
      description: "Variety of almond milks",
      price: 200,
      category: "Vegans",
+     quantity: 1,
      img: "lechesDeALMENDRAS.webp"
     },
     {id:2,
