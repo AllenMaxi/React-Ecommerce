@@ -9,17 +9,9 @@ const [press, setPress] = useState(false);
 const {itemsCart, setCart} = useContext(ItemCart);
 
 
-  const handleProduct = () => {
-    for (let i = 0; i < itemsCart.length; i++) {
-      if(itemsCart[i].id === product.id){
-       return
-      }  
-    }
-  setCart(product)
-  setPress(true);
+  const handleProduct = (count) => {
+  setCart({product: product, quantity: count})
 }
-
-console.log(itemsCart);
 
     return(
         <ItemsDetail>
@@ -33,7 +25,7 @@ console.log(itemsCart);
          <p>{description}</p>
          <h3>${price}</h3>
        </div>
-       <ItemDetailCount initial={1} stock={9} onAdd={handleProduct} press={press}/>
+       <ItemDetailCount initial={1} stock={9} onAdd={handleProduct} press={press} setPress={setPress}/>
      </div>
       </ItemsDetail>
     )
