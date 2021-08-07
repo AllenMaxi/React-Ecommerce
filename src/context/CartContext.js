@@ -30,7 +30,7 @@ export function ItemCartProvider({children}) {
     }
 
     const price = () => {
-      return itemsCart.reduce((acum, valor) => (acum + (valor.quantity * valor.product.price)), 0)
+      return itemsCart.reduce((acum, valor) => (acum + (valor.quantity * valor.product.precio)), 0)
     }
 
     const count = () => {

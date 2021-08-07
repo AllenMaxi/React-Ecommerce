@@ -9,9 +9,9 @@ const CartItemsContainer = () => {
     return (
         <div>
           {itemsCart.length > 0 ? itemsCart.map(item => <CartItems
-          name={item.product.name}
+          name={item.product.nombre}
           key={item.product.id}
-          img={item.product.img}
+          img={item.product.url}
           category={item.product.category}
           id={item.product.id}
           description={item.description}/>) 

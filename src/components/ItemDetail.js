@@ -12,21 +12,21 @@ const {itemsCart, setCart} = useContext(ItemCart);
   const handleProduct = (count) => {
   setCart({product: product, quantity: count})
 }
-
+console.log(itemsCart)
     return(
         <ItemsDetail>
       <h2><span>The best products to start your healthy life</span></h2>
-     <div className="container">
-       <h2>{name}</h2>
+          <div className="container">
+             <h2>{name}</h2>
        <BounceInDiv>
-       <img src={`../images/${img}`} alt={name}/>
+           <img src={img} alt={name}/>
        </BounceInDiv>
-       <div>
-         <p>{description}</p>
-         <h3>${price}</h3>
-       </div>
+          <div>
+            <p>{description}</p>
+            <h3>${price}</h3>
+          </div>
        <ItemDetailCount initial={1} stock={9} onAdd={handleProduct} press={press} setPress={setPress}/>
-     </div>
+          </div>
       </ItemsDetail>
     )
 }

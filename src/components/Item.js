@@ -11,7 +11,7 @@ const Item = ({name, img, price}) => {
       </div>
      <div className="item-img">
      <FlipInYDiv>
-       <img src={`../images/${img}`} alt={name}/> 
+       <img src={img} alt={name}/> 
        </FlipInYDiv>
      </div>
      <div>

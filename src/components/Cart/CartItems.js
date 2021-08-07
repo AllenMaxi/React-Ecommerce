@@ -9,7 +9,7 @@ const CartItems = ({name, description, img, category, id}) => {
     return (
         <div>
             <h2>{name}</h2>
-            <img src={`../images/${img}`} alt={name}/>
+            <img src={img} alt={name}/>
                <div>
                   {location.pathname === "/Cart" 
                   ? <button onClick={()=> removeItem(id)}>Remove Item</button>

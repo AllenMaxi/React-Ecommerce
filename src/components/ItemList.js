@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Item from './Item';
 import ItemCount from './ItemCount';
 import { products } from 'helpers/data';
 import { SpinnerRoundFilled } from 'spinners-react';
@@ -41,13 +40,15 @@ const ItemList = () => {
         thickness={116} 
         speed={93} 
         color="rgba(57, 172, 105, 1)" /> }
-    {!loading && items.map(item => <li key={item.name}>
-    <Item 
-      id={item.id}
-      name={item.name}
-      description={item.description}
-      price={item.price}
-      img={item.img} /> 
+    {!loading && items.map(item => <li key={item.name} className="details">
+    <div className="item-name">
+        <h2>{item.name}</h2>
+        <h3>{item.description}</h3>
+    </div>
+    <div className="item-img">
+        <img src={`images/${item.img}`} alt={item.name}/>
+    </div>
+    <h3><b>{item.price}</b></h3>
       <ItemCount id={item.id} /></li>)}
 </div> 
     )
