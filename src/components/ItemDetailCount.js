@@ -31,11 +31,11 @@ const handleOnAdd = () => {
      <div>
         <div>
      <button onClick={handleAdd}>+</button>
-     <label>{contador}</label>
+     <label> {contador} </label>
      <button onClick={handleRemove}>-</button>
      <div>
-    {press ? <Link to="/Cart"><button>Finish my purchase</button></Link>
-    :<button onClick={handleOnAdd}>Add to Cart</button>}
+    {press ? <Link to="/Cart"><button className="button">Finish my purchase</button></Link>
+    :<button className="btn" onClick={handleOnAdd}>Add to Cart</button>}
      </div>
        </div>
     </div>

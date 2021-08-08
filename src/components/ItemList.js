@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
 import { products } from 'helpers/data';
 import { SpinnerRoundFilled } from 'spinners-react';
-  
+import { FlipInYDiv } from 'animations/FlipInYDiv'; 
+
 const ItemList = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -41,12 +42,13 @@ const ItemList = () => {
         speed={93} 
         color="rgba(57, 172, 105, 1)" /> }
     {!loading && items.map(item => <li key={item.name} className="details">
+    <hr/>
     <div className="item-name">
         <h2>{item.name}</h2>
         <h3>{item.description}</h3>
     </div>
     <div className="item-img">
-        <img src={`images/${item.img}`} alt={item.name}/>
+      <FlipInYDiv> <img src={`images/${item.img}`} alt={item.name}/> </FlipInYDiv>
     </div>
     <h3><b>{item.price}</b></h3>
       <ItemCount id={item.id} /></li>)}

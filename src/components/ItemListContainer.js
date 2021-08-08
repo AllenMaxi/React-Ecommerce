@@ -1,5 +1,5 @@
 import React from 'react';
-import "../scss/main.scss";
+import "./styles/main.scss";
 import ItemList from './ItemList';
 
 export default function ItemListContainer(props) {

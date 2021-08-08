@@ -7,7 +7,7 @@ const ItemCount = ({id}) => {
     <div className="count">
         <div>
         <Link to={`/product-detail/${id}`} style={{ textDecoration: 'none' }}>      
-            <button>See More</button>
+            <button className="btn">See More</button>
         </Link>
         </div>
     </div>

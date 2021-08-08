@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ItemCart from 'context/CartContext';
 import { useLocation } from 'react-router';
+import { FlipInYDiv } from 'animations/FlipInYDiv';
 
 const CartItems = ({name, description, img, category, id}) => {
     const { removeItem } = useContext(ItemCart);
@@ -12,7 +13,7 @@ const CartItems = ({name, description, img, category, id}) => {
             <img src={img} alt={name}/>
                <div>
                   {location.pathname === "/Cart" 
-                  ? <button onClick={()=> removeItem(id)}>Remove Item</button>
+                  ? <button className="button"onClick={()=> removeItem(id)}>Remove Item</button>
                   : null}
                </div>
         </div>

@@ -125,3 +125,49 @@ h1{
   text-align: center;
 }
 
+.btn { 
+  color: #0099CC;
+  border: 2px solid #0099CC;
+  border-radius: 6px;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+  .btn:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button{
+  margin-top: 1rem;
+  background: #3cc4d6;
+  background-image: -webkit-linear-gradient(top, #2e2bdb, #2079b0);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  cursor: pointer;
+  font-family: Arial;
+  color: #fafafa;
+  font-size: 15px;
+  padding: 8px;
+  text-decoration: none;
+
+}
+.button:hover {
+  background: #2079b0;
+  background-image: -webkit-linear-gradient(top, #2079b0, #0e2edf);
+  background-image: -moz-linear-gradient(top, #2079b0, #2334c7);
+  background-image: -ms-linear-gradient(top, #2079b0, #3c2ae0);
+  background-image: -o-linear-gradient(top, #2079b0, #301de2);
+  background-image: linear-gradient(to bottom, #2079b0, #223cce);
+ 
+  text-decoration: none;
+}
