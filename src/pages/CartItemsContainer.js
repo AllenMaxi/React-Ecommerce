@@ -3,9 +3,10 @@ import ItemCart from 'context/CartContext';
 import CartItems from 'components/Cart/CartItems';
 import { Link } from 'react-router-dom';
 
+
 const CartItemsContainer = () => {
     const {itemsCart, price} = useContext(ItemCart);
-    console.log(itemsCart)
+
     return (
         <div>
           {itemsCart.length > 0 ? itemsCart.map(item => <CartItems
@@ -16,8 +17,9 @@ const CartItemsContainer = () => {
           id={item.product.id}
           description={item.description}/>) 
         : <h2>No tienes items en el carro. <Link to="/">Agregar</Link> </h2>}
-         
-         <h3>Total: {price()}</h3>
+         <h3>Total: ${price()}</h3>
+         {itemsCart.length > 0 &&
+         <Link to="CartForm" className="btn">Finalize my Purchase</Link>}
         </div>
     )
 }

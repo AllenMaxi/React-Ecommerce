@@ -50,7 +50,7 @@ const ItemList = () => {
     <div className="item-img">
       <FlipInYDiv> <img src={`images/${item.img}`} alt={item.name}/> </FlipInYDiv>
     </div>
-    <h3><b>{item.price}</b></h3>
+    <h3><b>${item.price}</b></h3>
       <ItemCount id={item.id} /></li>)}
 </div> 
     )

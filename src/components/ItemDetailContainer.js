@@ -24,7 +24,7 @@ console.log(product)
     return(
         <div className="center">
             {(product.length === 0) ? 
-            <div class="lds-roller"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
             :<ItemDetail name={product[0].nombre}
             img={product[0].url} 
             price={product[0].precio}

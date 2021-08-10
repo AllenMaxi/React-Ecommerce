@@ -32,10 +32,7 @@ function NavBar() {
               <Link to="/" style={{ textDecoration: 'none' }}> 
               <p>Healthy <span>LIFE</span> 🍚</p></Link>
             </div>
-            {itemsCart.length > 0 
-            ? <p>{count()}<Link to="/Cart"><CartWidget/></Link></p>
-            : null}
-         
+            <p>{count()}<Link to="/Cart"><CartWidget/></Link></p>
          </div>
       </div>
    )

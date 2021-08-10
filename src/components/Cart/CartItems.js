@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ItemCart from 'context/CartContext';
 import { useLocation } from 'react-router';
-import { FlipInYDiv } from 'animations/FlipInYDiv';
+
 
 const CartItems = ({name, description, img, category, id}) => {
     const { removeItem } = useContext(ItemCart);
