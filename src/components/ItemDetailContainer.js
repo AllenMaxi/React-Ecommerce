@@ -19,7 +19,8 @@ let {id} = useParams();
     db.collection("Items").doc(id).get() 
     .then((resp) =>  setProduct([ {id: resp.id, ...resp.data()}]))
     }
-  }, []) 
+  }, [id]) 
+
 console.log(product)
     return(
         <div className="center">

@@ -1,5 +1,6 @@
-import firebase from "firebase";
+import firebase from "firebase/app"
 import "firebase/firestore";
+
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -9,7 +10,6 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID
   };
-
 
  const app = firebase.initializeApp(firebaseConfig);
 

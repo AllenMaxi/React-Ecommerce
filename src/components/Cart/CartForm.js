@@ -2,9 +2,10 @@ import React, { useState, useContext } from 'react'
 import ItemCart from 'context/CartContext';
 import { SpinnerRoundFilled } from 'spinners-react';
 import { getFirestore } from 'components/functions/firebaseService';
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/firestore";
 import "components/styles/formContact.css";
+import { helpHttp } from 'helpers/helpHttp';
 
 const initialForm = {
     name: "",
@@ -26,7 +27,7 @@ const CartForm = () => {
       color: "#dc3545"
     }
 
-    const order = {buyer, item: itemsCart, date: firebase.firestore.Timestamp.fromDate(new Date) };
+    const order = {buyer, item: itemsCart, date: firebase.firestore.Timestamp.fromDate(new Date()) };
     
     const handleChange = (e) => {
         setBuyer({
@@ -84,12 +85,28 @@ const CartForm = () => {
           setTimeout(() => {
               setErrors({})
           }, 5000);
-
+          if (Object.keys(errors).length === 0) {
+            setLoading(true);
+            alert("Enviando Formulario");
+       helpHttp().post("https://formsubmit.co/ajax/maxiallende97@gmail.com", {
+                body: buyer,
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                },
+              })
+              .then((res) => {
+                setLoading(false);
+          }) 
+        }else {
+            return;
+          }
     }
      
     return (
         <div>
 <form id="contact_form" onSubmit={handleSubmit}>
+
     <div className="name">
     {errors.name && <p style={styles}> {errors.name} </p>}
       <label htmlFor="name"></label>
@@ -123,6 +140,7 @@ const CartForm = () => {
       onChange={handleChange}/>
        {errors.confirmationEmail && <p style={styles}> {errors.confirmationEmail} </p>}
     </div>
+    
     <div className="telephone">
       <label htmlFor="name"></label>
       <input type="text" 

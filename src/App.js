@@ -18,7 +18,7 @@ function App() {
       <NavBar/>
     <div className="App">
     <Switch>   
-      <div>
+      <>
     <main>
     <Route exact path="/">
 <ItemListContainer greeting={[
@@ -37,7 +37,7 @@ function App() {
   </div>
   <Route exact path="/Cart" component={CartItemsContainer}/>
   <Route exact path="/CartForm" component={CartForm} />
-      </div>
+      </>
       </Switch>
     </div>
     </Router>

@@ -42,7 +42,6 @@ const ItemList = () => {
         speed={93} 
         color="rgba(57, 172, 105, 1)" /> }
     {!loading && items.map(item => <li key={item.name} className="details">
-    <hr/>
     <div className="item-name">
         <h2>{item.name}</h2>
         <h3>{item.description}</h3>

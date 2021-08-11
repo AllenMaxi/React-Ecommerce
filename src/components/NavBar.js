@@ -7,7 +7,7 @@ import ItemCart from 'context/CartContext';
 
 function NavBar() {
    const [showLinks, setShowLinks] = useState(false);
-   const {count, itemsCart} = useContext(ItemCart);
+   const {count} = useContext(ItemCart);
 
    const cursor = {
       cursor: "pointer",
