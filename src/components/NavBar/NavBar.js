@@ -1,9 +1,10 @@
 import React, {useState, useContext} from 'react';
-import CartWidget from './CartWidget';
+import CartWidget from '../IconCart/CartWidget';
 import ReorderIcon from "@material-ui/icons/Reorder"
 import { Link } from 'react-router-dom';
-import "../App.css";
+import "../../App.css";
 import ItemCart from 'context/CartContext';
+import "./navBar.css";
 
 function NavBar() {
    const [showLinks, setShowLinks] = useState(false);

@@ -6,7 +6,7 @@ const Item = ({name, img, price}) => {
     return(
       
   <div className="details">
-      <div className="item-name">
+      <div className="item-name container">
         <h2>{name}</h2>
       </div>
      <div className="item-img">

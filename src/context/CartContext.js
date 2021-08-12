@@ -45,9 +45,8 @@ export function ItemCartProvider({children}) {
    cleanList,
    count
   }}>
-
-           {children}
-         </ItemCart.Provider> 
+   {children}
+ </ItemCart.Provider> 
 }
 
 export default ItemCart;

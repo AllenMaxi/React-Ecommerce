@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Item from 'components/Item';
-import { ProductStyles } from 'components/styles/ProductsStyle'
+import { ProductStyles } from 'pages/ProductsStyled'
 import { getFirestore } from 'components/functions/firebaseService';
-import "../components/styles/Spinner.css";
+import "../spinner/Spinner.css";
 
 const Products = () => {
     const [products, setProducts] = useState([])
@@ -24,8 +24,9 @@ const Products = () => {
 
     return(
         <ProductStyles>
+      <div className="containerDiv">
       {(products.length === 0) ? 
-    <div class="lds-roller"><div></div><div></div><div></div><div></div></div>
+    <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
          :
     products.map(item => <div key={item.nombre}><Item 
       id={item.id}
@@ -34,6 +35,7 @@ const Products = () => {
       price={item.precio}
       img={item.url}/>
       </div> )} 
+      </div>
      </ProductStyles>
     )
     }

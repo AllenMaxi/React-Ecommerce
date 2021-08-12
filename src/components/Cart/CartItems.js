@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import ItemCart from 'context/CartContext';
 import { useLocation } from 'react-router';
-
+import { ProductStyles } from 'pages/ProductsStyled';
 
 const CartItems = ({name, description, img, category, id}) => {
     const { removeItem } = useContext(ItemCart);
     let location = useLocation()
 
     return (
-        <div>
+        <ProductStyles>
+            <div className="container">
             <h2>{name}</h2>
             <img src={img} alt={name}/>
                <div>
@@ -16,7 +17,8 @@ const CartItems = ({name, description, img, category, id}) => {
                   ? <button className="button"onClick={()=> removeItem(id)}>Remove Item</button>
                   : null}
                </div>
-        </div>
+           </div>
+        </ProductStyles>
     )
 }
 

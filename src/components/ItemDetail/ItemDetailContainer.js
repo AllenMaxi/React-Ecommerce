@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import { getFirestore } from './functions/firebaseService';
-import "./styles/Spinner.css";
+import { getFirestore } from '../functions/firebaseService';
+import "../../spinner/Spinner.css";
 
 export default  function ItemDetailContainer() {
 const [product, setProduct] = useState([])
@@ -23,7 +23,7 @@ let {id} = useParams();
 
 console.log(product)
     return(
-        <div className="center">
+        <div className="center" style={{width: '100%', height: '500px'}}>
             {(product.length === 0) ? 
             <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
             :<ItemDetail name={product[0].nombre}

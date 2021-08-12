@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import ItemCart from 'context/CartContext';
-import CartItems from 'components/Cart/CartItems';
+import CartItems from './CartItems';
 import { Link } from 'react-router-dom';
 
 
@@ -8,7 +8,7 @@ const CartItemsContainer = () => {
     const {itemsCart, price} = useContext(ItemCart);
 
     return (
-        <div>
+        <div style={{width: '100%', height: '500px'}}>
           {itemsCart.length > 0 ? itemsCart.map(item => <CartItems
           name={item.product.nombre}
           key={item.product.id}

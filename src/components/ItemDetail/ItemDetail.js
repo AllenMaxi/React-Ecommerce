@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { ItemsDetail } from './styles/ItemsDetail';
+import { ItemsDetail } from './ItemsDetailStyled';
 import { BounceInDiv } from 'animations/BouncyDiv';
-import ItemDetailCount from './ItemDetailCount';
+import ItemDetailCount from '../ItemCount/ItemDetailCount';
 import ItemCart from 'context/CartContext';
 
 const ItemDetail = ({name, price, img, description, product}) => {

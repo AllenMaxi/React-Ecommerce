@@ -1,13 +1,14 @@
 import React from 'react'
-import NavBar from 'components/NavBar';
-import ItemListContainer from 'components/ItemListContainer';
+import NavBar from 'components/NavBar/NavBar';
+import ItemListContainer from 'components/ItemList/ItemListContainer';
 import "./App.css";
-import ItemDetailContainer from 'components/ItemDetailContainer';
+import ItemDetailContainer from 'components/ItemDetail/ItemDetailContainer';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Products from 'pages/Products';
 import { ItemCartProvider } from 'context/CartContext';
-import CartItemsContainer from 'pages/CartItemsContainer';
+import CartItemsContainer from 'components/Cart/CartItemsContainer';
 import CartForm from 'components/Cart/CartForm';
+import Footer from 'components/Footer';
 
 function App() {
  
@@ -42,6 +43,7 @@ function App() {
     </div>
     </Router>
     </div>
+    <Footer/>
     </ItemCartProvider>
   )
 }

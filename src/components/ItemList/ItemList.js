@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ItemCount from './ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
 import { products } from 'helpers/data';
 import { SpinnerRoundFilled } from 'spinners-react';
 import { FlipInYDiv } from 'animations/FlipInYDiv'; 
