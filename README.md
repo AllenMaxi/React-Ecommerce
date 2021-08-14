@@ -1,5 +1,6 @@
 Proyecto Final para el curso de React de CoderHouse.
 Ecommerce basado en una  dietética con productos para veganos y celiacos.
+
 Getting Started with Create React App
 This project was bootstrapped with Create React App.
 
