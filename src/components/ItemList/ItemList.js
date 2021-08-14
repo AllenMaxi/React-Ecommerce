@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { products } from 'helpers/data';
 import { SpinnerRoundFilled } from 'spinners-react';
-import { FlipInYDiv } from 'animations/FlipInYDiv'; 
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
@@ -11,7 +10,6 @@ const ItemList = () => {
  useEffect(() => {
     setLoading(true);
     const itemsList = products;
-    
       const task = new Promise((resolve, reject) => {
         
           let status = 200;
@@ -30,7 +28,9 @@ const ItemList = () => {
       getPromise()
       .then((res) => setItems(res))
       .catch(err => console.log(err) )
-      
+      return () => {
+          setItems({})
+      }
  }, [])
 
     return(
@@ -47,7 +47,7 @@ const ItemList = () => {
         <h3>{item.description}</h3>
     </div>
     <div className="item-img">
-      <FlipInYDiv> <img src={`images/${item.img}`} alt={item.name}/> </FlipInYDiv>
+      <img src={`images/${item.img}`} alt={item.name}/>
     </div>
     <h3><b>${item.price}</b></h3>
       <ItemCount id={item.id} /></li>)}

@@ -1,0 +1,26 @@
+.footer {
+    background-color: #021e39;
+    color: white;
+    width: 100%;
+    margin-top: 3rem;
+    padding: .5rem;
+  }
+  .footer h2 {
+    color: #2bafdb;
+  }
+  .footer p{
+   font-size: 1rem;
+  }
+  .footer a{
+    color: white;
+  }
+  .footer .icon {
+    font-size: 2rem;
+    margin-right: .5rem;
+  }
+  .footer_Redes{
+    text-align: center;
+  }
+  .footer_Redes h3 {
+    color: #2bafdb;
+  }

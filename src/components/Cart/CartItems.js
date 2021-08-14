@@ -1,24 +1,28 @@
 import React, { useContext } from 'react';
 import ItemCart from 'context/CartContext';
 import { useLocation } from 'react-router';
-import { ProductStyles } from 'pages/ProductsStyled';
+import "./CartStyles.css";
 
-const CartItems = ({name, description, img, category, id}) => {
+const CartItems = ({name, img, category, id, quantity, price}) => {
     const { removeItem } = useContext(ItemCart);
     let location = useLocation()
-
+    let totalPrice =  quantity * price
     return (
-        <ProductStyles>
-            <div className="container">
+        <div className="items_Container">
+            <div>
+            <hr/>
             <h2>{name}</h2>
-            <img src={img} alt={name}/>
+            <img src={img} alt={name} />
+            <p> {`Quantity: ${quantity}`} </p>
+            <p>{`Total Price: $${totalPrice}`}</p>
+            <h3>{category}</h3>
                <div>
                   {location.pathname === "/Cart" 
                   ? <button className="button"onClick={()=> removeItem(id)}>Remove Item</button>
                   : null}
                </div>
            </div>
-        </ProductStyles>
+        </div>
     )
 }
 

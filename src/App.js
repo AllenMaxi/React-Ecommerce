@@ -8,7 +8,8 @@ import Products from 'pages/Products';
 import { ItemCartProvider } from 'context/CartContext';
 import CartItemsContainer from 'components/Cart/CartItemsContainer';
 import CartForm from 'components/Cart/CartForm';
-import Footer from 'components/Footer';
+import Footer from 'components/Footer/Footer';
+import ContactForm from 'components/Contact/ContactForm';
 
 function App() {
  
@@ -16,8 +17,8 @@ function App() {
     <ItemCartProvider>
     <div>
     <Router>
-      <NavBar/>
-    <div className="App">
+    <div>
+    <NavBar/>
     <Switch>   
       <>
     <main>
@@ -38,12 +39,13 @@ function App() {
   </div>
   <Route exact path="/Cart" component={CartItemsContainer}/>
   <Route exact path="/CartForm" component={CartForm} />
+  <Route exact path="/Contact" component={ContactForm} />
       </>
       </Switch>
     </div>
     </Router>
-    </div>
     <Footer/>
+    </div>
     </ItemCartProvider>
   )
 }

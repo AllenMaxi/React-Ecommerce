@@ -3,12 +3,16 @@ import { useParams } from 'react-router-dom';
 import Item from 'components/Item';
 import { ProductStyles } from 'pages/ProductsStyled'
 import { getFirestore } from 'components/functions/firebaseService';
-import "../spinner/Spinner.css";
+import { SpinnerRoundFilled } from 'spinners-react';
 
 const Products = () => {
     const [products, setProducts] = useState([])
     let {categoryID} = useParams()
     
+    let styles = products.length > 0 ? 
+    { width: '100%',
+      height: "100%" } : { width: '100%',
+      height: "1800px" }
 
  useEffect(() => {
     const db = getFirestore()
@@ -24,9 +28,13 @@ const Products = () => {
 
     return(
         <ProductStyles>
-      <div className="containerDiv">
+      <div className="containerDiv" style={styles}>
       {(products.length === 0) ? 
-    <div className="lds-roller"><div></div><div></div><div></div><div></div></div>
+    <SpinnerRoundFilled 
+        size={58} 
+        thickness={116} 
+        speed={93} 
+        color="rgba(57, 172, 105, 1)" /> 
          :
     products.map(item => <div key={item.nombre}><Item 
       id={item.id}

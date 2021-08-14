@@ -22,7 +22,7 @@ function NavBar() {
             <Link to="/">Home</Link>
             <Link to="/category/Celiacs">Celiacs</Link>
             <Link to="/category/Vegans">Vegans</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/Contact">Contact</Link>
             </div>
          <button onClick={() => setShowLinks(!showLinks)} style={cursor}>
             <ReorderIcon/>

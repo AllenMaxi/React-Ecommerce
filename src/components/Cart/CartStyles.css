@@ -1,0 +1,9 @@
+.items_Container {
+    background-color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.items_Container img {
+    width: 20%;
+    height: 150px;
+}

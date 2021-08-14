@@ -1,6 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { ItemsDetail } from './ItemsDetailStyled';
-import { BounceInDiv } from 'animations/BouncyDiv';
 import ItemDetailCount from '../ItemCount/ItemDetailCount';
 import ItemCart from 'context/CartContext';
 
@@ -14,20 +12,18 @@ const {itemsCart, setCart} = useContext(ItemCart);
 }
 console.log(itemsCart)
     return(
-        <ItemsDetail>
+         <div>
       <h2><span>The best products to start your healthy life</span></h2>
           <div className="container">
              <h2>{name}</h2>
-       <BounceInDiv>
            <img src={img} alt={name}/>
-       </BounceInDiv>
           <div>
             <p>{description}</p>
             <h3>${price}</h3>
           </div>
        <ItemDetailCount initial={1} stock={9} onAdd={handleProduct} press={press} setPress={setPress}/>
           </div>
-      </ItemsDetail>
+          </div>
     )
 }
 
