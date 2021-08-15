@@ -6,7 +6,7 @@
 
 ## Purpose
 
-- Final Project for the React course at CoderHouse. Ecommerce based on a diet with products for vegans and celiacs.
+- CoderHouse React Course Final Project. Ecommerce based on a Healthy Store with products for vegans and celiacs.
 
 
 ## Code Process
