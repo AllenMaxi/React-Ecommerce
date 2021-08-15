@@ -4,12 +4,12 @@
 
 
 
-##Purpose
+## Purpose
 
 - Final Project for the React course at CoderHouse. Ecommerce based on a diet with products for vegans and celiacs.
 
 
-##Code Process
+## Code Process
 
 - We started creating the app with npx create-react-app.
 
@@ -30,7 +30,7 @@
 
 
 
-##Images
+## Images
 
 Image:
 
@@ -38,7 +38,7 @@ Image:
 
 > Follow your heart.
 
-##Git commands used
+## Git commands used
 
 - Git init
 - Git add .
@@ -48,4 +48,4 @@ Image:
 
 
 
-###End
+### End
