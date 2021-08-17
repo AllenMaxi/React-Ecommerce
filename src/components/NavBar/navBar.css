@@ -87,6 +87,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1000;
   }
   .Navbar .leftSide #hidden a{
    margin:10px;

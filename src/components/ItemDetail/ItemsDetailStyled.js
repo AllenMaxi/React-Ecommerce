@@ -3,14 +3,10 @@ import styled from 'styled-components';
 export const ItemsDetail = styled.div`
        text-align: center;
        max-width: 100%;
-  h2{
-       color: green;
-       font-family: Arial, Helvetica, sans-serif;
-       }
  .center {
          width: 100%; 
          height: 700px;
-        @media screen and (max-width: 620px){
+        @media screen and (max-width: 400px){
                width: 100%;
                height: 500px;
        }
@@ -28,15 +24,16 @@ export const ItemsDetail = styled.div`
        font-size: 1.5rem;
  }
 span{
-       color: black;
+      color: rgb(45, 223, 45);
  }
 
 .container{
         width: 60%;
         margin-left: auto;
         margin-right: auto;
-        background-color: white;
-         border-radius: 10%;
+        background-color: whitesmoke;
+         border-radius: 5%;
+         border-top: 5px groove black;
 }
 `;
 

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const CartItemsContainer = () => {
-    const {itemsCart, price} = useContext(ItemCart);
+    const {itemsCart, price, cleanList} = useContext(ItemCart);
 
     let styles = itemsCart.length > 0 ? {
       width: '100%',
@@ -28,6 +28,8 @@ const CartItemsContainer = () => {
          <h3>Total: ${price()}</h3>
          {itemsCart.length > 0 &&
          <Link to="CartForm" className="btn">Finalize my Purchase</Link>}
+         {itemsCart.length > 0 && 
+         <button className="btn"onClick={cleanList}>Remove All</button>}
         </div>
     )
 }

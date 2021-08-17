@@ -6,14 +6,16 @@ export function ItemCartProvider({children}) {
     const [itemsCart, setItemsCart] = useState([]);
 
     function removeItem(data) {
+      const itemInCart = itemsCart.find(item => item.product.id === data );
       const newItemsCart = itemsCart.filter(item => item.product.id !== data)
-       setItemsCart(newItemsCart);
+      itemInCart.quantity > 1 ? 
+      setItemsCart(itemsCart.map((item) => item.product.id === data 
+      ? {...itemsCart, ...item, quantity: item.quantity - 1} : item))
+      : setItemsCart(newItemsCart);
     }
 
     function setCart(data) {
-       console.log(data)
         const idx = itemsCart.findIndex(item => data.product.id === item.product.id)
-        console.log(idx)
         if(idx === -1) {
           setItemsCart([...itemsCart, data])
         } else {
@@ -21,9 +23,7 @@ export function ItemCartProvider({children}) {
           console.log("newQuantity", newQuantity)
           const oldList = itemsCart.filter(old => old.product.id !== data.product.id);
           setItemsCart([...oldList, {product: data.product, quantity: newQuantity}]);
-          console.log(itemsCart)
         }
-        
     }
     function cleanList () {
       setItemsCart([]);

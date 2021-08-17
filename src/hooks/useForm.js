@@ -12,7 +12,7 @@ export const useForm = (initialForm, validationsForm) => {
   const [response, setResponse] = useState(null);
   const [orderID, setOrderID] = useState(null);
 
-  const { itemsCart } = useContext(ItemCart);
+  const { itemsCart, cleanList} = useContext(ItemCart);
 
   const order = {form, item: itemsCart, date: firebase.firestore.Timestamp.fromDate(new Date()) };
 
@@ -35,7 +35,7 @@ export const useForm = (initialForm, validationsForm) => {
     setErrors(validationsForm(form));
 
     if (Object.keys(errors).length === 0) {
-      alert("Enviando Formulario");
+      alert("Sending Form");
       setLoading(true);
       helpHttp()
         .post("https://formsubmit.co/ajax/maxiallende97@gmail.com", {
@@ -49,6 +49,7 @@ export const useForm = (initialForm, validationsForm) => {
           setLoading(false);
           setResponse(true);
           setForm(initialForm);
+          cleanList();
           setTimeout(() => setResponse(false), 5000);
         });
     } else {
@@ -73,6 +74,10 @@ export const useForm = (initialForm, validationsForm) => {
     handleChange,
     handleBlur,
     handleSubmit,
-    orderID
+    setErrors,
+    orderID,
+    setResponse, 
+    setLoading,
+    setForm
   };
 };

@@ -13,7 +13,7 @@ const {itemsCart, setCart} = useContext(ItemCart);
 console.log(itemsCart)
     return(
          <div>
-      <h2><span>The best products to start your healthy life</span></h2>
+      <h2>The best products to start your healthy <span>Life</span></h2>
           <div className="container">
              <h2>{name}</h2>
            <img src={img} alt={name}/>

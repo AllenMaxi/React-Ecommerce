@@ -6,25 +6,28 @@ export const ProductStyles = styled.div`
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   .containerDiv{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: .5rem;
     align-items: center;
+    justify-content:center;
     @media screen and (max-width: 768px){
-    display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
     width: 100%;
     height: 3600px;
     }
 }
-   .cart_img {
-       width: 30%;
-       height: 230px;
-   }
+
    h2 {
        font-size: 2rem;
+       border: 5px solid black;
    }
    img{
        width: 50%;
-       height: 300px;
+       height: 300px;   
+       border-radius: 5%;  
+       @media screen and (max-width: 768px){
+         width: 50%;
+         height: 200px;
+}
    }
 `

@@ -3,8 +3,9 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-h1{
+h1, h2{
   font-family:  'Otomanopee One', sans-serif;
 }
 

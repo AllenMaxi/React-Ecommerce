@@ -10,12 +10,15 @@ const CartItems = ({name, img, category, id, quantity, price}) => {
     return (
         <div className="items_Container">
             <div>
-            <hr/>
-            <h2>{name}</h2>
-            <img src={img} alt={name} />
-            <p> {`Quantity: ${quantity}`} </p>
-            <p>{`Total Price: $${totalPrice}`}</p>
-            <h3>{category}</h3>
+            <div className="box grid-responsive">
+              <div>
+                <h2>{name}</h2>
+                <img src={img} alt={name} />
+                <p> {`Quantity: ${quantity}`} </p>
+                <p>{`Total Price: $${totalPrice}`}</p>
+                 <h3>{category}</h3>
+              </div>
+            </div>
                <div>
                   {location.pathname === "/Cart" 
                   ? <button className="button"onClick={()=> removeItem(id)}>Remove Item</button>

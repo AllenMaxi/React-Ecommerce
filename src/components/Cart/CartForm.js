@@ -12,8 +12,6 @@ const initialForm = {
     comments: "",
   };
 
-
-
 const CartForm = () => {
     const {
         form,
@@ -65,7 +63,6 @@ const CartForm = () => {
           required
         />
   {errors.confirmEmail && <p style={styles}>{errors.confirmEmail}</p>}
- 
         <textarea
           name="comments"
           cols="50"
@@ -81,7 +78,7 @@ const CartForm = () => {
       </form>
       {loading && <Loader />}
       {response && <Message 
-      msg="El formulario se ha enviado correctamente"
+      msg="The form has been submitted successfully"
       bgColor="#198754"/>}
       {orderID !== null && <Message msg={`Thanks, your purchase id is ${orderID}`} bgColor="#198754"/>}
         </div>
