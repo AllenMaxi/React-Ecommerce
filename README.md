@@ -28,6 +28,7 @@
 
 - We use Firebase / firestore to bring in products and then export our products to a new collection.
 
+- We use context for functionalities
 
 ## Git commands used
 
