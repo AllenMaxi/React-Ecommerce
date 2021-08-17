@@ -123,7 +123,7 @@ const ContactForm = () => {
    </form>
    {loading && <Loader />}
       {response && <Message 
-      msg="El formulario se ha enviado correctamente"
+      msg="The form has been submitted successfully"
       bgColor="#198754"/>}
         </div>
     )
