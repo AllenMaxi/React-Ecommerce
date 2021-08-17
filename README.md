@@ -29,14 +29,6 @@
 - We use Firebase / firestore to bring in products and then export our products to a new collection.
 
 
-
-## Images
-
-Image:
-
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
-
-
 ## Git commands used
 
 - Git init
